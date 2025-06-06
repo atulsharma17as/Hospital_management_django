@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% block content %}
+<h3>update profile page </h3>
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="text" name="firstname" value="{{user.first_name}}" placeholder="Firstname" required>
+    <input type="text" name="lastname" value="{{user.last_name}}" placeholder="Lastname" required>
+
+    <input type="text" name="email" value="{{user.email}}" placeholder="Email" required>
+
+    <input type="text" name="username" value="{{user.username}}" placeholder="IUsername" required>
+
+
+    <button type="submit">update</button>
+</form>
+<p>Already have an account? <a href="{% url 'profile' %}">back</a></p>
+{% endblock %}

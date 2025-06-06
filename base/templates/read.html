@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h3>Search operation</h3>
+<form action method="GET">
+    <input type="text" name="q" placeholder="Search by name or roll number">
+    <button type="submit">Search</button>
+</form>
+<h2>All Students</h2>
+<button><a href="{% url 'add_patient' %}">Add New Student</a></button> 
+<li type="none">
+    {% for i in data %}
+            {{i.name}} - {{i.age}} - {{i.gender}} - {{i.contact}} - {{i.consulting}}
+            <a href="{% url 'update' i.id %}">Update</a>
+        <a href="{% url 'deleting' i.id %}">Delete</a><br><br>
+
+    {% endfor %}
+</li>
+
+{% endblock %}

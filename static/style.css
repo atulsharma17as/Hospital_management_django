@@ -1,0 +1,287 @@
+/* Style the form container */
+form {
+  max-width: 450px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Form heading */
+h3 {
+  font-weight: 700;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+/* Paragraph around each form field */
+form p {
+  margin-bottom: 1.25rem;
+}
+
+/* Style labels */
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Inputs, selects, and textareas */
+input, select, textarea {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.8px solid #ccc;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Focus states */
+input:focus, select:focus, textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0,123,255,0.4);
+  outline: none;
+  background-color: #fff;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.8rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,123,255,0.6);
+  transition: background-color 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Back link styling */
+a {
+  display: inline-block;
+  margin-top: 1.6rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/*for navbar*/
+
+/* Professional Navigation Bar Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2937; /* Dark slate gray */
+  padding: 1rem 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.4s ease;
+}
+
+/* Subtle background change on scroll or hover - optional */
+nav:hover {
+  background-color: #374151; /* Slightly lighter slate */
+  cursor: default;
+}
+
+/* Logo styling */
+nav .logo {
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+nav .logo:hover {
+  color: #3b82f6; /* Professional blue accent */
+  cursor: default;
+}
+
+/* Navigation links container */
+nav .navlinks {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Nav links base style */
+nav .navlinks a {
+  color: #d1d5db; /* Light gray */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Link hover & focus style with smooth background and underline animation */
+nav .navlinks a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0;
+  height: 3px;
+  background-color: #3b82f6; /* Blue underline */
+  border-radius: 4px;
+  transition: width 0.35s ease, left 0.35s ease;
+}
+
+nav .navlinks a:hover,
+nav .navlinks a:focus {
+  color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.1);
+  outline: none;
+  box-shadow: 0 1px 6px rgba(59, 130, 246, 0.3);
+}
+
+nav .navlinks a:hover::after,
+nav .navlinks a:focus::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 640px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+  }
+
+  nav .navlinks {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  nav .navlinks a {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+}
+
+
+
+
+
+/* for list of patients */
+/* Container and heading */
+h2 {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  color: #222;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Button styling */
+button {
+  background-color: #007BFF;
+  border: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 auto 2rem auto;
+  display: block;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,123,255,0.4);
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style the link inside button */
+button a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Remove default list style */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Individual student entry */
+li {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Student info container */
+li > div {
+  margin-bottom: 0.5rem; /* Space between student info and actions */
+}
+
+/* Action links styling */
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.actions a {
+  color: #007BFF;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1.5px solid transparent;
+}
+
+.actions a:hover {
+  background-color: #007BFF;
+  color: white;
+  border-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  button {
+    width: 90%;
+  }
+}

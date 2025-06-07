@@ -3,7 +3,7 @@
 {% block content %}
 <h3>Search operation</h3>
 <form action method="GET">
-    <input type="text" name="q" placeholder="Search by name or roll number">
+    <input type="text" name="q" placeholder="Search by name or roll number" value="{{ search|default:'' }}">
     <button type="submit">Search</button>
 </form>
 <h2>All Students</h2>

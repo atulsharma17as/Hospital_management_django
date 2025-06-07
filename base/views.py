@@ -1,26 +1,26 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from base.models import patient
 from base.forms import PatientModelForms
-from django.db.models import Q
+from django.db.models import Q #contains all the details regarding the serach query.
 
 # Create your views here.
 def home(request):
    return render(request,'home.html')
 def search(request):
-  search=request.GET.get('q')
-  if search:
-    data=patient.objects.filter(
-       Q(deleted=False),
-       Q(name__icontains=search)|
-       Q(age__icontains=search) |
-       Q(gender__icontains=search) |
-       Q(contact__icontains=search) |
-       Q(consulting__icontains=search) 
-       ) #__icontent__ is used to search case-insensitive or remove case sensitivity.
-  else:
-    data=patient.objects.filter(deleted=False) #filter is used to filter the data from the database.
+    search=request.GET.get('q') #
+    if search:
+      data=patient.objects.filter(
+        Q(deleted=False),    #show records that are not deleted
+        Q(name__icontains=search)|  #__icontains is used to search case-insensitive or remove case sensitivity.
+        Q(age__icontains=search) |
+        Q(gender__icontains=search) |
+        Q(contact__icontains=search) |
+        Q(consulting__icontains=search) 
+        ) #__icontent__ is used to search case-insensitive or remove case sensitivity.
+    else:
+      data=patient.objects.filter(deleted=False) #filter is used to filter the data from the database.
 
-  return render(request,'add_patient.html',{'data':data,'search':search})
+    return render(request,'add_patient.html',{'data':data,'search':search})
 
 
 
